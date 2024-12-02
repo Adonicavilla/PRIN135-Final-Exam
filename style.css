@@ -76,7 +76,7 @@ body {
 
 
 
-..ball {
+.ball {
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -87,26 +87,48 @@ body {
 .red {
     background-color: red;
     box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5);
+    animation: red-glow 2s infinite alternate;
 }
 
 .green {
     background-color: green;
     box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5);
+    animation: green-glow 2s infinite alternate;
 }
 
 .blue {
     background-color: blue;
     box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.5);
+    animation: blue-glow 2s infinite alternate;
 }
 
-@keyframes glow {
+@keyframes red-glow {
     from {
-        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5);
     }
     to {
-        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 1);
+        box-shadow: 0 0 20px 10px rgba(255, 0, 0, 1);
     }
 }
+
+@keyframes green-glow {
+    from {
+        box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px 10px rgba(0, 255, 0, 1);
+    }
+}
+
+@keyframes blue-glow {
+    from {
+        box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px 10px rgba(0, 0, 255, 1);
+    }
+}
+
 
 .layer1 .ball:nth-child(1) { left: -30px; top: -10px; }
 .layer1 .ball:nth-child(2) { left: 0; top: -10px; }
