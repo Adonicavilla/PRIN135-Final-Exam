@@ -63,3 +63,106 @@ body {
     margin-top: -20px;
     border-radius: 4px;
 }
+
+
+
+
+
+.tree {
+    width: 0;
+    margin: 50px auto;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 150px solid green;
+    position: relative;
+    font-size: 0;
+}
+
+.star {
+    position: absolute;
+    top: -25px;
+    left: -13px;
+    font-size: 30px;
+    color: gold;
+}
+
+.layer {
+    position: relative;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.layer1 {
+    border-width: 50px 100px 0 100px;
+    border-bottom: 75px solid green;
+}
+
+.layer2 {
+    border-width: 50px 200px 0 200px;
+    border-bottom: 125px solid green;
+    top: -25px;
+}
+
+.layer3 {
+    border-width: 50px 300px 0 300px;
+    border-bottom: 175px solid green;
+    top: -50px;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.tree .layer .ball {
+    top: -25px;
+}
+
+.layer1 .red { left: 30px; }
+.layer1 .green { left: 70px; }
+.layer1 .blue { left: 110px; }
+
+.layer2 .red:nth-child(1) { left: 40px; top: -20px; }
+.layer2 .green:nth-child(2) { left: 60px; top: -20px; }
+.layer2 .blue:nth-child(3) { left: 80px; top: -20px; }
+.layer2 .red:nth-child(4) { left: 120px; top: -20px; }
+.layer2 .blue:nth-child(5) { left: 140px; top: -20px; }
+.layer2 .green:nth-child(6) { left: 160px; top: -20px; }
+.layer2 .red:nth-child(7) { left: 200px; top: -20px; }
+.layer2 .green:nth-child(8) { left: 220px; top: -20px; }
+.layer2 .blue:nth-child(9) { left: 240px; top: -20px; }
+.layer2 .red:nth-child(10) { left: 280px; top: -20px; }
+.layer2 .blue:nth-child(11) { left: 300px; top: -20px; }
+.layer2 .green:nth-child(12) { left: 320px; top: -20px; }
+
+.layer3 .red:nth-child(1) { left: 40px; top: -15px; }
+.layer3 .blue:nth-child(2) { left: 60px; top: -15px; }
+.layer3 .blue:nth-child(3) { left: 80px; top: -15px; }
+.layer3 .red:nth-child(4) { left: 120px; top: -15px; }
+.layer3 .green:nth-child(5) { left: 140px; top: -15px; }
+.layer3 .green:nth-child(6) { left: 160px; top: -15px; }
+.layer3 .blue:nth-child(7) { left: 200px; top: -15px; }
+.layer3 .blue:nth-child(8) { left: 220px; top: -15px; }
+.layer3 .red:nth-child(9) { left: 240px; top: -15px; }
+.layer3 .green:nth-child(10) { left: 280px; top: -15px; }
+.layer3 .green:nth-child(11) { left: 300px; top: -15px; }
+.layer3 .blue:nth-child(12) { left: 320px; top: -15px; }
+.layer3 .red:nth-child(13) { left: 360px; top: -15px; }
+.layer3 .red:nth-child(14) { left: 380px; top: -15px; }
+.layer3 .green:nth-child(15) { left: 400px; top: -15px; }
+
+
