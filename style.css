@@ -1,4 +1,4 @@
-* {
+oo* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -228,4 +228,157 @@ body {
     margin-top: -20px;
 }
 
+.tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 0;
+    position: relative;
+}
 
+.star {
+    font-size: 24px;
+    color: gold;
+    margin-bottom: -10px;
+    animation: star-glow 2s infinite alternate, star-spin 3s infinite linear;
+}
+
+@keyframes star-glow {
+    from {
+        text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold;
+    }
+    to {
+        text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+    }
+}
+
+@keyframes star-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.layer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.layer1 {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 75px solid green;
+    margin-top: -20px;
+    animation: layer-bounce 3s infinite ease-in-out;
+}
+
+.layer2 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 95px solid green;
+    margin-top: -35px;
+    animation: layer-bounce 3s infinite ease-in-out;
+}
+
+.layer3 {
+    width: 0;
+    height: 0;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-bottom: 115px solid green;
+    margin-top: -50px;
+    animation: layer-bounce 3s infinite ease-in-out;
+}
+
+@keyframes layer-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.ball {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    animation: glow 2s infinite alternate;
+    z-index: 1;
+}
+
+.red {
+    background-color: red;
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5);
+    animation: red-glow 2s infinite alternate;
+}
+
+.green {
+    background-color: green;
+    box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5);
+    animation: green-glow 2s infinite alternate;
+}
+
+.blue {
+    background-color: blue;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.5);
+    animation: blue-glow 2s infinite alternate;
+}
+
+@keyframes red-glow {
+    from {
+        box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px 10px rgba(255, 0, 0, 1);
+    }
+}
+
+@keyframes green-glow {
+    from {
+        box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px 10px rgba(0, 255, 0, 1);
+    }
+}
+
+@keyframes blue-glow {
+    from {
+        box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px 10px rgba(0, 0, 255, 1);
+    }
+}
+
+.layer1 .ball:nth-child(1) { left: -30px; top: -10px; z-index: 10; }
+.layer1 .ball:nth-child(2) { left: 0; top: -10px; z-index: 10; }
+.layer1 .ball:nth-child(3) { left: 30px; top: -10px; z-index: 10; }
+
+.layer2 .ball:nth-child(1) { left: -45px; top: -15px; z-index: 10; }
+.layer2 .ball:nth-child(2) { left: -15px; top: -15px; z-index: 10; }
+.layer2 .ball:nth-child(3) { left: 15px; top: -15px; z-index: 10; }
+.layer2 .ball:nth-child(4) { left: 45px; top: -15px; z-index: 10; }
+
+.layer3 .ball:nth-child(1) { left: -60px; top: -20px; z-index: 10; }
+.layer3 .ball:nth-child(2) { left: -30px; top: -20px; z-index: 10; }
+.layer3 .ball:nth-child(3) { left: 0; top: -20px; z-index: 10; }
+.layer3 .ball:nth-child(4) { left: 30px; top: -20px; z-index: 10; }
+.layer3 .ball:nth-child(5) { left: 60px; top: -20px; z-index: 10; }
+
+.trunk {
+    width: 20px;
+    height: 50px;
+    background-color: #8B4513;
+    margin-top: -25px;
+}
