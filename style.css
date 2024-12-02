@@ -20,11 +20,19 @@ body {
 }
 
 .star {
-    font-size: 2rem;
+    font-size: 24px;
     color: gold;
-    position: relative;
-    z-index: 10;
-    margin-bottom: -25px
+    margin-bottom: -10px;
+    animation: star-glow 2s infinite alternate;
+}
+
+@keyframes star-glow {
+    from {
+        text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold;
+    }
+    to {
+        text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+    }
 }
 
 .layer {
@@ -68,13 +76,27 @@ body {
 
 
 
-.ball {
+..ball {
     width: 15px;
     height: 15px;
     border-radius: 50%;
     position: absolute;
-    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
     animation: glow 2s infinite alternate;
+}
+
+.red {
+    background-color: red;
+    box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.5);
+}
+
+.green {
+    background-color: green;
+    box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.5);
+}
+
+.blue {
+    background-color: blue;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.5);
 }
 
 @keyframes glow {
@@ -84,18 +106,6 @@ body {
     to {
         box-shadow: 0 0 20px 10px rgba(255, 255, 255, 1);
     }
-}
-
-.red {
-    background-color: red;
-}
-
-.green {
-    background-color: green;
-}
-
-.blue {
-    background-color: blue;
 }
 
 .layer1 .ball:nth-child(1) { left: -30px; top: -10px; }
