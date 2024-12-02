@@ -76,6 +76,76 @@ body {
 
 
 
+..tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 0;
+    position: relative;
+}
+
+.star {
+    font-size: 24px;
+    color: gold;
+    margin-bottom: -10px;
+    animation: star-glow 2s infinite alternate;
+}
+
+@keyframes star-glow {
+    from {
+        text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px gold;
+    }
+    to {
+        text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px gold;
+    }
+}
+
+.layer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.layer1 {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 75px solid green;
+    margin-top: -20px;
+    animation: layer-bounce 3s infinite ease-in-out;
+}
+
+.layer2 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 95px solid green;
+    margin-top: -35px;
+    animation: layer-bounce 3s infinite ease-in-out;
+}
+
+.layer3 {
+    width: 0;
+    height: 0;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-bottom: 115px solid green;
+    margin-top: -50px;
+    animation: layer-bounce 3s infinite ease-in-out;
+}
+
+@keyframes layer-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 .ball {
     width: 15px;
     height: 15px;
@@ -129,7 +199,6 @@ body {
     }
 }
 
-
 .layer1 .ball:nth-child(1) { left: -30px; top: -10px; }
 .layer1 .ball:nth-child(2) { left: 0; top: -10px; }
 .layer1 .ball:nth-child(3) { left: 30px; top: -10px; }
@@ -145,6 +214,12 @@ body {
 .layer3 .ball:nth-child(4) { left: 30px; top: -20px; }
 .layer3 .ball:nth-child(5) { left: 60px; top: -20px; }
 
+.trunk {
+    width: 20px;
+    height: 50px;
+    background-color: #8B4513;
+    margin-top: -25px;
+}
 
 .trunk {
     width: 20px;
