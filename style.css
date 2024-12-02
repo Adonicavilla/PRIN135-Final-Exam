@@ -68,98 +68,9 @@ body {
 
 
 
-.tree {
-    width: 0;
-    margin: 50px auto;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 150px solid green;
-    position: relative;
-    font-size: 0;
-}
-
-.star {
-    position: absolute;
-    top: -25px;
-    left: -13px;
-    font-size: 30px;
-    color: gold;
-}
-
-.layer {
-    position: relative;
-    border-style: solid;
-    border-color: transparent;
-}
-
-.layer1 {
-    border-width: 50px 100px 0 100px;
-    border-bottom: 75px solid green;
-}
-
-.layer2 {
-    border-width: 50px 200px 0 200px;
-    border-bottom: 125px solid green;
-    top: -25px;
-}
-
-.layer3 {
-    border-width: 50px 300px 0 300px;
-    border-bottom: 175px solid green;
-    top: -50px;
-}
-
-
-.tree {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    font-size: 0;
-}
-
-.star {
-    font-size: 24px;
-    color: gold;
-    margin-bottom: -10px;
-}
-
-.layer {
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.layer1 {
-    width: 0;
-    height: 0;
-    border-left: 60px solid transparent;
-    border-right: 60px solid transparent;
-    border-bottom: 80px solid green;
-    margin-top: -20px;
-}
-
-.layer2 {
-    width: 0;
-    height: 0;
-    border-left: 80px solid transparent;
-    border-right: 80px solid transparent;
-    border-bottom: 100px solid green;
-    margin-top: -40px;
-}
-
-.layer3 {
-    width: 0;
-    height: 0;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 120px solid green;
-    margin-top: -60px;
-}
-
 .ball {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     position: absolute;
 }
@@ -176,25 +87,21 @@ body {
     background-color: blue;
 }
 
-.layer1 .ball:nth-child(1) { left: -50px; top: -20px; }
-.layer1 .ball:nth-child(2) { left: -20px; top: -20px; }
-.layer1 .ball:nth-child(3) { left: 10px; top: -20px; }
+.layer1 .ball:nth-child(1) { left: -30px; top: -10px; }
+.layer1 .ball:nth-child(2) { left: 0; top: -10px; }
+.layer1 .ball:nth-child(3) { left: 30px; top: -10px; }
 
-.layer2 .ball:nth-child(1) { left: -60px; top: -40px; }
-.layer2 .ball:nth-child(2) { left: -40px; top: -40px; }
-.layer2 .ball:nth-child(3) { left: -20px; top: -40px; }
-.layer2 .ball:nth-child(4) { left: 0px; top: -40px; }
-.layer2 .ball:nth-child(5) { left: 20px; top: -40px; }
-.layer2 .ball:nth-child(6) { left: 40px; top: -40px; }
+.layer2 .ball:nth-child(1) { left: -45px; top: -15px; }
+.layer2 .ball:nth-child(2) { left: -15px; top: -15px; }
+.layer2 .ball:nth-child(3) { left: 15px; top: -15px; }
+.layer2 .ball:nth-child(4) { left: 45px; top: -15px; }
 
-.layer3 .ball:nth-child(1) { left: -80px; top: -60px; }
-.layer3 .ball:nth-child(2) { left: -60px; top: -60px; }
-.layer3 .ball:nth-child(3) { left: -40px; top: -60px; }
-.layer3 .ball:nth-child(4) { left: -20px; top: -60px; }
-.layer3 .ball:nth-child(5) { left: 0px; top: -60px; }
-.layer3 .ball:nth-child(6) { left: 20px; top: -60px; }
-.layer3 .ball:nth-child(7) { left: 40px; top: -60px; }
-.layer3 .ball:nth-child(8) { left: 60px; top: -60px; }
+.layer3 .ball:nth-child(1) { left: -60px; top: -20px; }
+.layer3 .ball:nth-child(2) { left: -30px; top: -20px; }
+.layer3 .ball:nth-child(3) { left: 0; top: -20px; }
+.layer3 .ball:nth-child(4) { left: 30px; top: -20px; }
+.layer3 .ball:nth-child(5) { left: 60px; top: -20px; }
+
 
 .trunk {
     width: 20px;
